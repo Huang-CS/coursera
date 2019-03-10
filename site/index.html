@@ -1,9 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Hello</title>
+	<title>2019马立平一年级识字比赛生字表</title>
+	<style>
+		h1 {
+			background-color: lightblue;
+		}
+
+		p {
+			font-size: 100px;
+			margin: 10px;
+		}
+
+		button {
+			font-size: 20px;
+			margin-top: 40px;
+			margin-left: 10px;
+		}
+
+	</style>
 </head>
+
 <body>
-<h1>lalalal test</h1>
+	<h1 class="tt">2019马立平一年级识字比赛生字表（比赛时间 03-30-2019）</h1>
+
+	<button type="button" onclick="myFunction()">
+		下一个生字</button>
+
+	<p id="demo"></p>
+
+	<p></p>
+
+	<button type="button" onclick="myFunction2()">
+			下一个生词</button>
+	
+		<p id="demo2"></p>
+
+
+
 </body>
+
+<script>
+	var originalZi = "雨 千 万 条 线 掉 进 水 风 云 雪 镜 他 也 哭 笑 脸 脏 就 知 道 爸 妈 爱 袋 鼠 奇 怪 好 胸 挂 放 果 菜 娃 爬 来 米 田 石 木 土 画 远 色 近 听 无 声 春 人 蝌 蚪 细 身 脑 长 着 变 啦 了 腿 脱 衣 服 换 裤 褂 咦 成 青 蛙 弯 的 月 亮 船 尖 闪 星 天 日 火 牛 匹 马 件 羊 群 鸭 桃 百 鱼 虫 草 和 请 吃 说 谢 猫 狗 骨 同 种 阿 姨 把 玉 秋 收 很 叔 它 想 呢 落 叶 吹 气 凉 从 枝 躲 当 作 沟 蚂 蚁 河 游 过 藏 伞 顶 燕 低 信 们 要 南 方 时 候 冬 飘 起 出 玩 跑 留 印 对 这 是 那 梅 竹 目 有";
+	var zi = originalZi.split(" ");
+	var i = 0;
+	zi.sort(function (a, b) { return 0.5 - Math.random() });
+	document.getElementById("demo").innerHTML = (i+1)+". "+zi[i];
+
+	var originalCi = "树枝 竹叶 屋顶 瓶子 玉米 天气 叔叔 阿姨 蚂蚁 燕子 我们 南方 时候 谢谢 不吃 骨头 青草 一同 草地 挂着 秋天 收了 很多 地里 好吃 好看 种花 还有 落叶 低声 果子 就在 绿叶 不同 躲进 雨伞 很远 知道 脚印 雪花飘 一起 留下 梅花 这是 那是 时候 冬天 看着 飞跑 过冬";
+	var ci = originalCi.split(" ");
+	var j = 0;
+	ci.sort(function (a, b) { return 0.5 - Math.random() });
+	document.getElementById("demo2").innerHTML = (j+1)+". "+ci[j];
+
+
+
+	function myFunction() {
+		i++;
+		if (i >= zi.length)
+			document.getElementById("demo").innerHTML = "Done";
+		else
+			document.getElementById("demo").innerHTML = (i+1)+". "+zi[i];
+	}
+
+
+	function myFunction2() {
+		j++;
+		if (j >= ci.length)
+			document.getElementById("demo2").innerHTML = "Done";
+		else
+			document.getElementById("demo2").innerHTML = (j+1)+". "+ci[j];
+	}
+
+
+
+</script>
+
+
 </html>
