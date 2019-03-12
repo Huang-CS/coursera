@@ -19,6 +19,20 @@
 			margin-left: 10px;
 		}
 
+		@media(max-width: 800px) {
+			h1 {
+			font-size: 60px;
+		}
+
+			button {
+				font-size: 60px;
+				margin-top: 40px;
+				margin-left: 10px;
+			}
+		}
+
+
+
 	</style>
 </head>
 
@@ -33,9 +47,9 @@
 	<p></p>
 
 	<button type="button" onclick="myFunction2()">
-			下一个生词</button>
-	
-		<p id="demo2"></p>
+		下一个生词</button>
+
+	<p id="demo2"></p>
 
 
 
@@ -46,13 +60,13 @@
 	var zi = originalZi.split(" ");
 	var i = 0;
 	zi.sort(function (a, b) { return 0.5 - Math.random() });
-	document.getElementById("demo").innerHTML = (i+1)+". "+zi[i];
+	document.getElementById("demo").innerHTML = (i + 1) + ". " + zi[i];
 
 	var originalCi = "树枝 竹叶 屋顶 瓶子 玉米 天气 叔叔 阿姨 蚂蚁 燕子 我们 南方 时候 谢谢 不吃 骨头 青草 一同 草地 挂着 秋天 收了 很多 地里 好吃 好看 种花 还有 落叶 低声 果子 就在 绿叶 不同 躲进 雨伞 很远 知道 脚印 雪花飘 一起 留下 梅花 这是 那是 时候 冬天 看着 飞跑 过冬";
 	var ci = originalCi.split(" ");
 	var j = 0;
 	ci.sort(function (a, b) { return 0.5 - Math.random() });
-	document.getElementById("demo2").innerHTML = (j+1)+". "+ci[j];
+	document.getElementById("demo2").innerHTML = (j + 1) + ". " + ci[j];
 
 
 
@@ -61,7 +75,7 @@
 		if (i >= zi.length)
 			document.getElementById("demo").innerHTML = "Done";
 		else
-			document.getElementById("demo").innerHTML = (i+1)+". "+zi[i];
+			document.getElementById("demo").innerHTML = (i + 1) + ". " + zi[i];
 	}
 
 
@@ -70,7 +84,7 @@
 		if (j >= ci.length)
 			document.getElementById("demo2").innerHTML = "Done";
 		else
-			document.getElementById("demo2").innerHTML = (j+1)+". "+ci[j];
+			document.getElementById("demo2").innerHTML = (j + 1) + ". " + ci[j];
 	}
 
 
