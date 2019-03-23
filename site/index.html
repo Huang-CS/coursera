@@ -55,6 +55,12 @@
 		<button type="button" onclick="myFunction2()">
 			下一个生词</button>
 
+		<p></p>
+
+		<p id="demo3"></p>
+		<button type="button" onclick="myFunction3()">
+			下一个</button>
+
 	</div>
 
 </body>
@@ -71,6 +77,12 @@
 	var j = 0;
 	ci.sort(function (a, b) { return 0.5 - Math.random() });
 	document.getElementById("demo2").innerHTML = (j + 1) + ". " + ci[j];
+
+
+	var unknown = "万 条 线 掉 镜 脸 脏 奇 怪 胸 放 菜 来 木 近 听 无 身 长 变 啦 腿 衣 服 换 裤 褂 成 蛙 闪 星 桃 百 鱼 阿 收 叔 想 呢 吹 凉 枝 当 作 沟 河 游 过 藏 顶 时 出 玩 留 对";
+	unknown = unknown.split(" ");
+	var k = 0;
+	document.getElementById("demo3").innerHTML = (k + 1) + ". " + unknown[k];
 
 
 
@@ -91,6 +103,13 @@
 			document.getElementById("demo2").innerHTML = (j + 1) + ". " + ci[j];
 	}
 
+	function myFunction3() {
+		k++;
+		if (k >= unknown.length)
+			document.getElementById("demo3").innerHTML = "Done";
+		else
+			document.getElementById("demo3").innerHTML = (k + 1) + ". " + unknown[k];
+	}
 
 
 </script>
