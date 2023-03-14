@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>2023马立平K识字比赛生字表</title>
+	<style>
+		h1 {
+			background-color: lightblue;
+		}
+
+		p {
+			font-size: 120px;
+			margin: 10px;
+			margin-top: 40px;
+
+		}
+
+		button {
+			font-size: 20px;
+			margin-left: 10px;
+		}
+
+
+		@media(max-width: 1200px) {
+			h1 {
+				font-size: 60px;
+			}
+
+			button {
+				font-size: 60px;
+				margin-left: 10px;
+			}
+
+			div {
+				text-align: center;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="tt">2023马立平K识字比赛生字表</h1>
+
+
+	<button type="button" onclick="window.location.reload();">
+		Refresh Page</button>
+		<br><br>
+	<div>
+		<p id="demo"></p>
+		<button type="button" onclick="myFunction()">
+			下一个</button>
+
+		<p></p>
+		<br><br><br><br>
+
+
+
+		<!-- <p id="demo2"></p> -->
+		<!-- <button type="button" onclick="myFunction2()">
+			下一个生词</button> -->
+
+		<p></p>
+
+		<p id="demo3"></p>
+		<button type="button" onclick="myFunction3()">
+			下一个</button>
+
+	</div>
+
+</body>
+
+<script>
+	var originalZi = `好宝宝 小朋友 小画家 七十岁 
+天亮了 香又甜 最干净 不知道 
+点点头 弯弯腰 哈哈笑 轻轻跳 慢慢跑 快快来 比不了 出来了 
+洗个澡 闭着嘴 穿花衣 
+妈妈 爸爸 爷爷 叔叔 娃娃 弟弟 
+奶奶 姐姐 我的 我小 胡子 花狗 小鸟 鸭子 青蛙 蚂蚁 熊猫 公鸡 尾巴 楼房 花园 门口 太阳 青草 小河 下雨 一天 东西 米饭 鸡蛋 青菜 肉汤 豆腐 水果 苹果 积木 刷牙 吃饭 吃饱 洗澡 洗脸 走路 起来 抬头 唱歌 睡着 长大 坐下 扫地 知道 不吵 不闹 不叫 上班 下班 进屋 送给 告诉 漂亮 花白 什么 别说 游来 游去 
+你 谁 猫 水 米 喝 笑 爬 想 洗 是 早 好 方 圆 在 会
+`;
+	var zi = originalZi.split(" ");
+	var i = 0;
+	zi.sort(function (a, b) { return 0.5 - Math.random() });
+	document.getElementById("demo").innerHTML = (i + 1) + ". " + zi[i];
+
+	// var originalCi = "树枝 竹叶 屋顶 瓶子 玉米 天气 叔叔 阿姨 蚂蚁 燕子 我们 南方 时候 谢谢 不吃 骨头 青草 一同 草地 挂着 秋天 收了 很多 地里 好吃 好看 种花 还有 落叶 低声 果子 就在 绿叶 不同 躲进 雨伞 很远 知道 脚印 雪花飘 一起 留下 梅花 这是 那是 时候 冬天 看着 飞跑 过冬";
+	// var ci = originalCi.split(" ");
+	// var j = 0;
+	// ci.sort(function (a, b) { return 0.5 - Math.random() });
+	// document.getElementById("demo2").innerHTML = (j + 1) + ". " + ci[j];
+
+
+	var unknown = "不熟悉的词";
+	unknown = unknown.split(" ");
+	var k = 0;
+	document.getElementById("demo3").innerHTML = (k + 1) + ". " + unknown[k];
+
+
+
+	function myFunction() {
+		i++;
+		if (i >= zi.length)
+			document.getElementById("demo").innerHTML = "Done";
+		else
+			document.getElementById("demo").innerHTML = (i + 1) + ". " + zi[i];
+	}
+
+
+	function myFunction2() {
+		j++;
+		if (j >= ci.length)
+			document.getElementById("demo2").innerHTML = "Done";
+		else
+			document.getElementById("demo2").innerHTML = (j + 1) + ". " + ci[j];
+	}
+
+	function myFunction3() {
+		k++;
+		if (k >= unknown.length)
+			document.getElementById("demo3").innerHTML = "Done";
+		else
+			document.getElementById("demo3").innerHTML = (k + 1) + ". " + unknown[k];
+	}
+
+
+</script>
+
+
+</html>
