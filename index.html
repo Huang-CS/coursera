@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>2019马立平一年级识字比赛生字表</title>
+	<title>2023马立平五年级识字比赛生字表</title>
 	<style>
 		h1 {
 			background-color: lightblue;
@@ -39,21 +39,24 @@
 </head>
 
 <body>
-	<h1 class="tt">2019马立平一年级识字比赛生字表（比赛时间 03-30-2019）</h1>
+	<h1 class="tt">2023马立平五年级识字比赛生字表</h1>
 
+
+	<button type="button" onclick="window.location.reload();">
+		Refresh Page</button>
 
 	<div>
 		<p id="demo"></p>
 		<button type="button" onclick="myFunction()">
-			下一个生字</button>
+			下一个</button>
 
 		<p></p>
 
 
 
-		<p id="demo2"></p>
-		<button type="button" onclick="myFunction2()">
-			下一个生词</button>
+		<!-- <p id="demo2"></p> -->
+		<!-- <button type="button" onclick="myFunction2()">
+			下一个生词</button> -->
 
 		<p></p>
 
@@ -66,20 +69,31 @@
 </body>
 
 <script>
-	var originalZi = "捞 夜 晚 井 急 得 叫 糟 连 忙 跟 老 快 倒 拉 住 另 接 越 长 直 最 伸 刚 碰 抬 喘 用 故 灰 帮 完 车 送 给 您 伯 包 吗 翻 松 以 浇 捉 什 饿 些 再 没 点 吧 挑 担 问 哪 才 能 自 己 钓 早 晨 太 阳 东 弟 哥 话 蜻 蜓 竿 已 经 蝴 蝶 漂 但 唉 为 专 心 儿 停 像 步 动 力 狐 狸 窝 洞 她 孩 块 馋 流 亲 羽 雀 差 歌 句 意 极 哇 张 粒 种 泥 醒 觉 暖 挺 蚓 现 外 音 告 诉 样 答 让 热 闹 喜 欢 赶 突 然 光 明 世 语 皮 球 宝 拍 重 铅 笔 肠 图 写 字 汗 淌 美 丽 冠 油 脖 金 第 饱 啄 病 治 医 摇 摆 园 蜜 蜂 鼓 采 肚 稻 害 惭 愧 此 每 喔 蛇 孙 敖 次 擦 泪 难 骆 驼 夏 散 错 情 证 俩 围 墙 肯 认 输 向 窄 模 跪 评 各 短 如 既 争 论 休 聪 淘 洗 澡 装 照 闭 咯 姐 爪 舔 眯 喵 妙 哈 皱 眉 臊 干 净 床 穿 讲 桌 椅 窗 电 灯 冰 箱 视 机 汽 壁 虎 借 正 角 挣 呀 池 塘 行 拨 甩 握 转 丢 旧 新 植 物 海 翅 膀 靠 蒲 英 准 备 降 苍 带 刺 静 等 蚊 咬 饭 戏 喊 趣 胡 翘 蝇 檐 掌 嗓 谁 唱 许 举 扒 舒 轻 蚯 整 洋 微 纷 发 别 今 所 久 死 挖 矮 怕 冷 累 息 眨 傻 伤 理 因 表 断 逃 先 肉 叼 站 界 谜 遍 催 埋";
-	var zi = originalZi.split(" ");
+	var originalZi = `美猴王	出世	花果山	周围	鲜花	洗澡	纷纷	本领	同意	水帘洞
+	师父	衣服	徒弟	姓名	弟子	神仙	邻居	三星洞	不敢	孙悟空
+	金箍棒	附近	妖怪	大刀	兵器	筋斗云	龙王	干干净净	带领	原因
+	玉皇大帝	报告	成仙	千里眼	方便	弼马温	南天门	天兵天将	高兴	认识
+	蟠桃	齐天大圣	朋友	土地神	熟	健康	长寿	长生不老	休息	摘桃
+	法力	太上老君	葫芦	仙丹	太白金星	遇见	胆子	命令	厉害	投降
+	五行山	观音菩萨	二郎神	万一	宝贝	伤害	钢铁	火眼金睛	睁眼	烧
+	唐僧	如来佛祖	大唐	取经	千辛万苦	皇帝	保护	困难	危险	兄弟
+	小白龙	流水	只剩	只好	流泪	没有用	转身	无论	黄河	降伏
+	猪八戒	傍晚	村庄	年轻人	雨伞	法师	降妖	剩下	答应	陪
+	流沙河	波浪	叹气	脖子	不分胜败	忍不住	打架	不如	猪八戒	立刻
+	偷吃	人参果	师徒	风景	结果	一共	经过	没关系	刚	不信`;
+	var zi = originalZi.split("\t");
 	var i = 0;
 	zi.sort(function (a, b) { return 0.5 - Math.random() });
 	document.getElementById("demo").innerHTML = (i + 1) + ". " + zi[i];
 
-	var originalCi = "树枝 竹叶 屋顶 瓶子 玉米 天气 叔叔 阿姨 蚂蚁 燕子 我们 南方 时候 谢谢 不吃 骨头 青草 一同 草地 挂着 秋天 收了 很多 地里 好吃 好看 种花 还有 落叶 低声 果子 就在 绿叶 不同 躲进 雨伞 很远 知道 脚印 雪花飘 一起 留下 梅花 这是 那是 时候 冬天 看着 飞跑 过冬";
-	var ci = originalCi.split(" ");
-	var j = 0;
-	ci.sort(function (a, b) { return 0.5 - Math.random() });
-	document.getElementById("demo2").innerHTML = (j + 1) + ". " + ci[j];
+	// var originalCi = "树枝 竹叶 屋顶 瓶子 玉米 天气 叔叔 阿姨 蚂蚁 燕子 我们 南方 时候 谢谢 不吃 骨头 青草 一同 草地 挂着 秋天 收了 很多 地里 好吃 好看 种花 还有 落叶 低声 果子 就在 绿叶 不同 躲进 雨伞 很远 知道 脚印 雪花飘 一起 留下 梅花 这是 那是 时候 冬天 看着 飞跑 过冬";
+	// var ci = originalCi.split(" ");
+	// var j = 0;
+	// ci.sort(function (a, b) { return 0.5 - Math.random() });
+	// document.getElementById("demo2").innerHTML = (j + 1) + ". " + ci[j];
 
 
-	var unknown = "条 掉 胸 挂 放 细 脑 变 啦 成 腿 脱 褂 桃 蛙 万 镜 怪 说 奇 谢 收 呢 吹 凉 低 候 对 时 道 知 过 换 枝 玩 瓶子";
+	var unknown = "不熟悉的词";
 	unknown = unknown.split(" ");
 	var k = 0;
 	document.getElementById("demo3").innerHTML = (k + 1) + ". " + unknown[k];
